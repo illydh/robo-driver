@@ -1,6 +1,6 @@
 # Playwright Robot Driver
 
-a Python program that can automatically perform a task on a website (like filling out a long form or tracking an order).
+a Python program that can automatically perform a task on a website (getting price of user-indicated item).
 
 ## Quick Start
 
