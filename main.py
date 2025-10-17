@@ -11,7 +11,7 @@ from tenacity import (
 )
 
 from config import settings
-from utils import logger, RecoverableError
+from utils import RecoverableError
 
 
 retry_click = retry(
@@ -20,6 +20,11 @@ retry_click = retry(
     wait=wait_exponential(multiplier=0.5, min=0.5, max=4),
     retry=retry_if_exception_type(RecoverableError),
 )
+
+
+def get_user_input():
+    query = input("Enter the product to search for on Nike: ")
+    return query
 
 
 @retry_click
@@ -222,8 +227,9 @@ def run(query: str) -> str:
 
 
 if __name__ == "__main__":
+    query = get_user_input()
     parser = argparse.ArgumentParser(description="Nike search + price robot")
-    parser.add_argument("--query", default="Men's Pegasus", help="Search query")
+    parser.add_argument("--query", default=query, help="Search query")
     parser.add_argument("--headless", action="store_true", help="Run headless")
     args = parser.parse_args()
 
