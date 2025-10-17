@@ -20,6 +20,6 @@ playwright install
 python main.py
 
 #   expected output:
-#   
+###   Success! Product "Sauce Labs Backpack" found at price: $29.99
 ```
 
