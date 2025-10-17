@@ -20,6 +20,6 @@ playwright install
 python main.py
 
 #   expected output:
-###   Success! Product "Sauce Labs Backpack" found at price: $29.99
+###  Success! First result for "pegasus" is "Nike Pegasus Premium" priced at $220
 ```
 
