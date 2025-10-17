@@ -1,0 +1,4 @@
+playwright
+tenacity
+pydantic
+pydantic-settings
